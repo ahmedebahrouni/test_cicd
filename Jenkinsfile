@@ -80,12 +80,13 @@ stage('Build Docker Image') {
 
 
 		   stage('Run Spring && MySQL Containers') {
-                                steps {
-                                    script {
-                                      sh 'docker-compose up -d'
-                                    }
-                                }
-                            }
+               steps {
+                   script {
+                       sh '/usr/local/bin/docker-compose up -d'
+                   }
+               }
+           }
+
 
 	    
 
