@@ -60,7 +60,7 @@ sh "mvn clean verify sonar:sonar -Dsonar.projectKey=cicd -Dsonar.projectName='ci
 stage('Build Docker Image') {
                       steps {
                           script {
-                            sh 'docker build -t ahmed1919/spring-app:second .'
+                            sh 'docker build -t ahmed1919/ahmedtest .'
                           }
                       }
                   }
@@ -74,7 +74,7 @@ stage('Build Docker Image') {
 	    
 	                      stage('Push Docker Image') {
                                         steps {
-                                   sh 'docker push ahmed1919/spring-app:second'
+                                   sh 'docker push ahmed1919/ahmedtest'
                                             }
 		  }
 
@@ -82,7 +82,7 @@ stage('Build Docker Image') {
 		   stage('Run Spring && MySQL Containers') {
                steps {
                    script {
-                       sh '/usr/local/bin/docker-compose up -d'
+                       sh 'docker-compose up -d'
                    }
                }
            }
