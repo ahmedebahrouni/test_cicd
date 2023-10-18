@@ -42,7 +42,7 @@ pipeline{
         stage('Code Quality Check via SonarQube') {
             steps{
 
-sh "mvn clean verify sonar:sonar -Dsonar.projectKey=cicd -Dsonar.projectName='cicd' -Dsonar.host.url=http://192.168.33.10:9000 -Dsonar.token=sqp_2eb3d3d01582ddbd26fe6411512bd23206500e22 "
+sh "mvn clean verify sonar:sonar -Dsonar.projectKey=cicd -Dsonar.projectName='cicd' -Dsonar.host.url=http://192.168.33.10:9000 -Dsonar.token=sqp_7a3d74219d8d361d1dc27b0722c9799ca77ddd45 "
             }
         }
 
