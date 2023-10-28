@@ -112,7 +112,7 @@ mail bcc: '', body: '''Dear bahrouni ahmed,
 we are sorry to inform you that your pipeline build failed. 
 Keep working ! 
 -Jenkins Team-''', cc: '', from: 'ahmed.bahrouni@esprit.tn', replyTo: '', subject: 'Build Finished - Failure', to: 'ahmed.bahrouni@esprit.tn'
-		}*/
+		}
 
        always {
 		//emailext attachLog: true, body: '', subject: 'Build finished',from: 'ahmed.bahrouni@esprit.tn' , to: 'ahmed.bahrouni@esprit.tn'
