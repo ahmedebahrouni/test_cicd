@@ -39,23 +39,26 @@ pipeline{
 
 
 
-        stage('Code Quality Check via SonarQube') {
-            steps{
 
-sh "mvn clean verify sonar:sonar -Dsonar.projectKey=cicd -Dsonar.projectName='cicd' -Dsonar.host.url=http://192.168.33.10:9000 -Dsonar.token=sqp_7a3d74219d8d361d1dc27b0722c9799ca77ddd45 "
-            }
-        }
+               stage('Code Quality Check via SonarQube') {
+                   steps{
 
-
-        /* stage('Publish to Nexus') {
-            steps {
+       sh " mvn clean verify sonar:sonar -Dsonar.projectKey=powerdevops -Dsonar.projectName='powerdevops' -Dsonar.host.url=http://192.168.33.10:9000 -Dsonar.token=sqp_09b8c5e3f3d0ff40ae63a2ab52ac6b90190c5076"
+                   }
+               }
 
 
-  sh 'mvn clean package deploy:deploy-file -DgroupId=com.esprit.examen -DartifactId=tpAchatProject -Dversion=1.2 -DgeneratePom=true -Dpackaging=jar -DrepositoryId=maven-releases -Durl=http://172.10.0.140:8081/repository/maven-releases/ -Dfile=target/tpAchatProject-1.2.jar'
+                stage('Publish to Nexus') {
+                   steps {
 
 
-            }
-        } */
+
+         sh 'mvn clean package deploy:deploy-file -DgroupId=com.esprit.examen -DartifactId=achat -Dversion=1.2 -DgeneratePom=true -Dpackaging=jar -DrepositoryId=deploymentRepo -Durl=http://192.168.33.10:8081/repository/maven-releases/ -Dfile=target/achat-1.0.jar'
+
+
+
+                   }
+               }
 
 stage('Build Docker Image') {
                       steps {
@@ -97,7 +100,7 @@ stage('Build Docker Image') {
 
 	    
         post {
-		/*success{
+		success{
 		mail bcc: '', body: '''Dear Med ahmed bahrouni ,
 we are happy to inform you that your pipeline build was successful. 
 Great work ! 
