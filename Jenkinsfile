@@ -29,7 +29,7 @@ pipeline{
             }
         }
 
-/*
+
 
          stage('Unit Tests') {
             steps{
@@ -81,7 +81,7 @@ stage('Build Docker Image') {
                                             }
 		  }
 
-*/
+
 		   stage('Run Spring && MySQL Containers yes') {
                steps {
                    script {
@@ -115,7 +115,7 @@ Keep working !
 		}
 
        always {
-		//emailext attachLog: true, body: '', subject: 'Build finished',from: 'ahmed.bahrouni@esprit.tn' , to: 'ahmed.bahrouni@esprit.tn'
+		emailext attachLog: true, body: '', subject: 'Build finished',from: 'ahmed.bahrouni@esprit.tn' , to: 'ahmed.bahrouni@esprit.tn'
             cleanWs()
        }
     }
