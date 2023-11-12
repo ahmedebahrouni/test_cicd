@@ -81,7 +81,63 @@ stage('Build Docker Image') {
                                             }
 		  }
 
+stage('clone frontend'){
+         steps{
+             script{
+                   checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url:"https://github.com/ahmedebahrouni/front.git"
 
+
+]]])
+             }
+         }
+
+ }
+
+ stage("build and push frontend docker image") {
+
+
+            steps {
+                script {
+
+           sh 'docker login -u ahmed1919 --password dckr_pat_wRsBljrIeVpG1l8CBB5TxXBXKqA'
+
+                 sh "docker push ahmed1919/front"
+
+                }
+            }
+
+
+
+
+            }
+
+
+
+	    stage('Build Frontend Docker Image') {
+                      steps {
+                          script {
+                            sh 'docker build -t ahmed1919/front .'
+                          }
+                      }
+                  }
+
+ stage("Push Frontend Docker image") {
+
+
+            steps {
+                script {
+
+             sh 'docker login -u ahmed1919 --password dckr_pat_wRsBljrIeVpG1l8CBB5TxXBXKqA'
+
+             sh "docker push ahmed1919/front"
+
+                }
+            }
+
+
+
+
+            }
 		   stage('Run Spring && MySQL Containers yes') {
                steps {
                    script {
@@ -98,7 +154,7 @@ stage('Build Docker Image') {
      
 }
 
-	    
+
         post {
 		success{
 		mail bcc: '', body: '''Dear Med ahmed bahrouni ,
