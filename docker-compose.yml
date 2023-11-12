@@ -23,7 +23,7 @@ services:
     restart: on-failure
     env_file: ./.env
     angular-app:
-      image: ahmed1919/ahmedtest:front
+      image: ahmed1919/ahmedtest
       ports:
         - "4200:80"  # Adapter le port selon les spécifications de votre application Angular
       depends_on:

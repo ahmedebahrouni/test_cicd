@@ -101,7 +101,7 @@ stage('clone frontend'){
 
            sh 'docker login -u ahmed1919 --password dckr_pat_wRsBljrIeVpG1l8CBB5TxXBXKqA'
 
-                 sh "docker push ahmed1919/ahmedtest:front"
+                 sh "docker push ahmed1919/ahmedtest"
 
                 }
             }
@@ -116,7 +116,7 @@ stage('clone frontend'){
 	    stage('Build Frontend Docker Image') {
                       steps {
                           script {
-                            sh 'docker build -t ahmed1919/ahmedtest:front .'
+                            sh 'docker build -t ahmed1919/ahmedtest .'
                           }
                       }
                   }
@@ -129,7 +129,7 @@ stage('clone frontend'){
 
              sh 'docker login -u ahmed1919 --password dckr_pat_wRsBljrIeVpG1l8CBB5TxXBXKqA'
 
-             sh "docker push ahmed1919/ahmedtest:front"
+             sh "docker push ahmed1919/ahmedtest"
 
                 }
             }
