@@ -37,9 +37,9 @@ pipeline{
             }
         }
 
-
-
 /*
+
+
                stage('Code Quality Check via SonarQube') {
                    steps{
 
@@ -59,7 +59,7 @@ pipeline{
 
                    }
                }
-
+*/
 stage('Build Docker Image') {
                       steps {
                           script {
@@ -80,7 +80,8 @@ stage('Build Docker Image') {
                                    sh 'docker push ahmed1919/ahmedtest'
                                             }
 		  }
-*/
+
+
 stage('clone frontend'){
          steps{
              script{
@@ -92,7 +93,7 @@ stage('clone frontend'){
          }
 
  }
-
+/*
  stage("build and push frontend docker image") {
 
 
@@ -134,7 +135,7 @@ stage('clone frontend'){
                 }
             }
 
-
+*/
 
 
             }
