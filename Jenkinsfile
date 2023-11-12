@@ -63,7 +63,7 @@ pipeline{
 stage('Build Docker Image') {
                       steps {
                           script {
-                            sh 'docker build -t ahmed1919/ahmedtest .'
+                            sh 'docker build -t ahmed1919/ahmedtest1 .'
                           }
                       }
                   }
@@ -77,7 +77,7 @@ stage('Build Docker Image') {
 	    
 	                      stage('Push Docker Image') {
                                         steps {
-                                   sh 'docker push ahmed1919/ahmedtest'
+                                   sh 'docker push ahmed1919/ahmedtest1'
                                             }
 		  }
 
