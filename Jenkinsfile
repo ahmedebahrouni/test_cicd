@@ -63,7 +63,7 @@ pipeline{
  stage('Build Docker Image') {
                       steps {
                           script {
-                            sh 'docker build -t ahmed1919/ahmedtest1 .'
+                            sh 'docker build -t ahmed1919/ahmedtest .'
                           }
                       }
                   }
@@ -77,7 +77,7 @@ pipeline{
 	    
 	                      stage('Push Docker Image') {
                                         steps {
-                                   sh 'docker push ahmed1919/ahmedtest1'
+                                   sh 'docker push ahmed1919/ahmedtest'
                                             }
 		  }
 
@@ -102,7 +102,7 @@ stage('clone frontend'){
 
            sh 'docker login -u ahmed1919 --password dckr_pat_wRsBljrIeVpG1l8CBB5TxXBXKqA'
 
-                 sh "docker push ahmed1919/ahmedtest"
+                 sh "docker push ahmed1919/ahmedtest1"
 
                 }
             }
@@ -117,7 +117,7 @@ stage('clone frontend'){
 	    stage('Build Frontend Docker Image') {
                       steps {
                           script {
-                            sh 'docker build -t ahmed1919/ahmedtest .'
+                            sh 'docker build -t ahmed1919/ahmedtest1 .'
                           }
                       }
                   }
@@ -130,7 +130,7 @@ stage('clone frontend'){
 
              sh 'docker login -u ahmed1919 --password dckr_pat_wRsBljrIeVpG1l8CBB5TxXBXKqA'
 
-             sh "docker push ahmed1919/ahmedtest"
+             sh "docker push ahmed1919/ahmedtest1"
 
                 }
             }
@@ -179,6 +179,6 @@ Keep working !
     }
 
     
-	
+
 }
        
