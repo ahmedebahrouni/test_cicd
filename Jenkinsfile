@@ -40,7 +40,7 @@ pipeline{
 
 
 
-              /*  stage('Code Quality Check via SonarQube') {
+               stage('Code Quality Check via SonarQube') {
                    steps{
 
        sh " mvn clean verify sonar:sonar -Dsonar.projectKey=powerdevops -Dsonar.projectName='powerdevops' -Dsonar.host.url=http://192.168.33.10:9000 -Dsonar.token=sqp_09b8c5e3f3d0ff40ae63a2ab52ac6b90190c5076"
@@ -138,7 +138,7 @@ stage('clone frontend'){
 
 
 
-            } */
+            } 
 
 		   stage('Run Spring && MySQL Containers yes') {
                steps {
