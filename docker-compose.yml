@@ -1,4 +1,3 @@
-
 version: "3.3"
 
 services:
@@ -14,18 +13,18 @@ services:
       MYSQL_PASSWORD: '$MYSQL_PASSWORD'
       MYSQL_ROOT_HOST: '%'
     ports:
-      - $MYSQLDB_LOCAL_PORT:$MYSQLDB_DOCKER_PORT
+      - "$MYSQLDB_LOCAL_PORT:$MYSQLDB_DOCKER_PORT"
     volumes:
       - db:/var/lib/mysql
 
   app:
     depends_on:
       - mysqldb
-    image: ahmed1919/ahmedtest1
+    image: ahmed1919/ahmedtest
     restart: on-failure
     env_file: ./.env
     ports:
-      - $SPRING_LOCAL_PORT:$SPRING_DOCKER_PORT
+      - "$SPRING_LOCAL_PORT:$SPRING_DOCKER_PORT"
     environment:
       SPRING_APPLICATION_JSON: '{
         "spring.datasource.url"  : "jdbc:mysql://mysqldb:$MYSQLDB_DOCKER_PORT/$MYSQLDB_DATABASE?useSSL=false",
