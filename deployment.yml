@@ -14,13 +14,13 @@ spec:
     spec:
       containers:
         - name: tp-achat-container
-          image: ahmed1919/ahmedtest1
+          image: ahmed1919/ahmedtest
           # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           spec:
             containers:
               - name: DevOps_Project
-                image: ahmed1919/ahmedtest
+                image: ahmed1919/ahmedtest1
                 # Image that will be used to containers in the cluster
                 imagePullPolicy: IfNotPresent
           ports:
