@@ -37,7 +37,7 @@ pipeline{
             }
         }
 
-/*
+
 
 
                stage('Code Quality Check via SonarQube') {
@@ -59,8 +59,8 @@ pipeline{
 
                    }
                }
-*/
-/* stage('Build Docker Image') {
+
+ stage('Build Docker Image') {
                       steps {
                           script {
                             sh 'docker build -t ahmed1919/ahmedtest1 .'
@@ -79,7 +79,7 @@ pipeline{
                                         steps {
                                    sh 'docker push ahmed1919/ahmedtest1'
                                             }
-		  } */
+		  }
 
 
 stage('clone frontend'){
@@ -93,7 +93,7 @@ stage('clone frontend'){
          }
 
  }
-/*
+
  stage("build and push frontend docker image") {
 
 
@@ -139,7 +139,7 @@ stage('clone frontend'){
 
 
             }
-            */
+
 		   stage('Run Spring && MySQL Containers yes') {
                steps {
                    script {
