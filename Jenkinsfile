@@ -82,7 +82,7 @@ pipeline{
 		  }
  */
 
-/* stage('clone frontend'){
+stage('clone frontend'){
          steps{
              script{
                    checkout([$class: 'GitSCM', branches: [[name: '*//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//* main']], extensions: [], userRemoteConfigs: [[url:"https://github.com/ahmedebahrouni/front.git"
@@ -123,7 +123,7 @@ pipeline{
 
 
 
-            } */
+            }
 
 		   stage('Run Spring && MySQL Containers yes') {
                steps {
