@@ -40,7 +40,7 @@ pipeline{
 
 
 
-               /* stage('Code Quality Check via SonarQube') {
+                stage('Code Quality Check via SonarQube') {
                    steps{
 
        sh " mvn clean verify sonar:sonar -Dsonar.projectKey=powerdevops -Dsonar.projectName='powerdevops' -Dsonar.host.url=http://192.168.33.10:9000 -Dsonar.token=sqp_09b8c5e3f3d0ff40ae63a2ab52ac6b90190c5076"
@@ -63,7 +63,7 @@ pipeline{
  stage('Build Docker Image') {
                       steps {
                           script {
-                            sh 'docker build -t ahmed1919/ahmedtest .'
+                            sh 'docker build -t ahmed1919/ahmedtest:back .'
                           }
                       }
                   }
@@ -77,7 +77,7 @@ pipeline{
 	    
 	                      stage('Push Docker Image') {
                                         steps {
-                                   sh 'docker push ahmed1919/ahmedtest'
+                                   sh 'docker push ahmed1919/ahmedtest:back'
                                             }
 		  }
 
@@ -102,7 +102,7 @@ stage('clone frontend'){
 
            sh 'docker login -u ahmed1919 --password dckr_pat_wRsBljrIeVpG1l8CBB5TxXBXKqA'
 
-                 sh "docker push ahmed1919/ahmedtest1"
+                 sh "docker push ahmed1919/ahmedtest:front"
 
                 }
             }
@@ -117,7 +117,7 @@ stage('clone frontend'){
 	    stage('Build Frontend Docker Image') {
                       steps {
                           script {
-                            sh 'docker build -t ahmed1919/ahmedtest1 .'
+                            sh 'docker build -t ahmed1919/ahmedtest:front .'
                           }
                       }
                   }
@@ -130,7 +130,7 @@ stage('clone frontend'){
 
              sh 'docker login -u ahmed1919 --password dckr_pat_wRsBljrIeVpG1l8CBB5TxXBXKqA'
 
-             sh "docker push ahmed1919/ahmedtest1"
+             sh "docker push ahmed1919/ahmedtest:front"
 
                 }
             }
@@ -138,7 +138,7 @@ stage('clone frontend'){
 
 
 
-            } */
+            }
 
 		   stage('Run Spring && MySQL Containers yes') {
                steps {
