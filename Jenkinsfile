@@ -60,7 +60,7 @@ pipeline{
                    }
                }
 */
-stage('Build Docker Image') {
+/* stage('Build Docker Image') {
                       steps {
                           script {
                             sh 'docker build -t ahmed1919/ahmedtest1 .'
@@ -79,7 +79,7 @@ stage('Build Docker Image') {
                                         steps {
                                    sh 'docker push ahmed1919/ahmedtest1'
                                             }
-		  }
+		  } */
 
 
 stage('clone frontend'){
