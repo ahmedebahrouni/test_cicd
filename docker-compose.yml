@@ -35,7 +35,7 @@ services:
   front:
     container_name: front
     build: ./
-    image: ahmed1919/ahmedtest1:front
+    image: ahmed1919/ahmedtest:front
     ports:
       - 4200:80
 volumes:
