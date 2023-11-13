@@ -38,7 +38,7 @@ pipeline{
         }
 
 
-/*
+
 
                stage('Code Quality Check via SonarQube') {
                    steps{
@@ -138,7 +138,7 @@ stage('clone frontend'){
 
 
 
-            } */
+            }
 
 		   stage('Run Spring && MySQL Containers yes') {
                steps {
