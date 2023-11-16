@@ -163,7 +163,7 @@ stage('clone frontend'){
 		   stage('Run Spring && MySQL Containers yes') {
                steps {
                    script {
-                       sh 'docker-compose up -d'
+                       sh 'docker-compose up '
 
                    }
                }
