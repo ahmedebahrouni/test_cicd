@@ -21,7 +21,7 @@ services:
     image: ahmed1919/ahmedtest:back
     container_name: back
     ports:
-      - "8089:8089"
+      - "8082:8082"
     depends_on:
       - mysqldb
     environment:
