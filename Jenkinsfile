@@ -129,7 +129,7 @@ stage('clone frontend'){
 		   stage('Run Spring && MySQL Containers yes') {
                steps {
                    script {
-                       sh 'docker-compose up '
+                       sh 'docker-compose up --remove-orphans'
 
                    }
                }
