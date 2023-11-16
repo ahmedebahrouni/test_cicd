@@ -2,6 +2,6 @@
 /wait
 echo "** Starting Container"
 echo "starting web app"#
-java -jar achat-1.0.jar
+java -jar tpAchatProject-1.2.jar
 
 echo "** Closing Container"

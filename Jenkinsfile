@@ -18,7 +18,7 @@ pipeline{
        stage('Cleaning the project') {
             steps{
                 	sh "mvn -B -DskipTests clean  "
-               sh 'docker-compose up -d'
+               
             }
         }
 
@@ -129,8 +129,8 @@ stage('clone frontend'){
 		   stage('Run Spring && MySQL Containers yes') {
                steps {
                    script {
-                     //  sh 'docker-compose up -d'
-                       echo "MySql"
+                       sh 'docker-compose up -d'
+
                    }
                }
            }
