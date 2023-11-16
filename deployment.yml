@@ -18,4 +18,4 @@ spec:
           # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8089
+            - containerPort: 8080
