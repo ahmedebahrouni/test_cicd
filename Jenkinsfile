@@ -146,10 +146,10 @@ stage('clone frontend'){
 
         post {
 		success{
-		mail bcc: '', body: '''Dear Med ahmed bahrouni ,
-we are happy to inform you that your pipeline build was successful. 
-Great work ! 
--Jenkins Team-''', cc: '', from: 'ahmed.bahrouni@esprit.tn', replyTo: '', subject: 'Build Finished - Success', to: 'ahmed.bahrouni@esprit.tn'
+		mail bcc: '', body: '''Morning  eya trifi ,
+we are happy to inform you that Ahmed Bahrouni's pipeline build was successful Thanks you for your Time see you 7:30 nchalla.
+ciao !
+-Jenkins Team-''', cc: '', from: 'ahmed.bahrouni@esprit.tn', replyTo: '', subject: 'Build Finished - Success', to: 'eya.trifi@esprit.tn'
 		}
 		
 		failure{
